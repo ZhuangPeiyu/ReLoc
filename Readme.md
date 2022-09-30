@@ -8,8 +8,8 @@ This is the implementation of the method proposed in "ReLoc: A Restoration-Assis
 - main_train.py
 - metrics.py
 - models
-  denseFCN.py
-  SCUnet.py
+  -denseFCN.py
+  -SCUnet.py
 - checkpoint
 
 
