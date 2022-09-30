@@ -15,5 +15,5 @@ This is the implementation of the method proposed in "ReLoc: A Restoration-Assis
 
 # How to run
 ## Train the model from scratch
-python3 main_train.py
+python main_train.py
 
