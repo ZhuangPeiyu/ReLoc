@@ -17,3 +17,10 @@ This is the implementation of the method proposed in "ReLoc: A Restoration-Assis
 ## Train the model from scratch
 python main_train.py
 
+
+# Acknowledgments
+The tampering localiatin methods used in this paper can find in the following links:
+## SCSE-Unet: https://github.com/HighwayWu/ImageForensicsOSN
+## MVSS-net: https://github.com/dong03/MVSS-Net
+## DenseFCN: https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization
+The restoration module used in this paper is SC-Unet: https://github.com/cszn/SCUNet/
