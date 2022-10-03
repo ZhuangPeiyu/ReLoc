@@ -20,7 +20,7 @@ python main_train.py
 
 # Acknowledgments
 The tampering localization methods and restoration method used in this paper can find in the following links:
-- SCSE-Unet: https://github.com/HighwayWu/ImageForensicsOSN-
+- SCSE-Unet: https://github.com/HighwayWu/ImageForensicsOSN
 - MVSS-net: https://github.com/dong03/MVSS-Net
 - DenseFCN: https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization
 - SC-Unet: https://github.com/cszn/SCUNet/
