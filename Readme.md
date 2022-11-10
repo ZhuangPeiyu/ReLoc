@@ -24,3 +24,15 @@ The tampering localization methods and restoration method used in this paper can
 - MVSS-net: https://github.com/dong03/MVSS-Net
 - DenseFCN: https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization
 - SC-Unet: https://github.com/cszn/SCUNet/
+
+# Cication
+If you use our code please cite:
+
+@misc{zhuang2022reloc,
+      title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization}, 
+      author={Peiyu Zhuang and Haodong Li and Rui Yang and Jiwu Huang},
+      year={2022},
+      eprint={2211.03930},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
