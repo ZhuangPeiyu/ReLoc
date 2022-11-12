@@ -28,11 +28,9 @@ The tampering localization methods and restoration method used in this paper can
 # Cication
 If you use our code please cite:
 
-@misc{zhuang2022reloc,
-      title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization}, 
-      author={Peiyu Zhuang and Haodong Li and Rui Yang and Jiwu Huang},
-      year={2022},
-      eprint={2211.03930},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{zhuang2022reloc,
+  title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization},
+  author={Zhuang, Peiyu and Li, Haodong and Yang, Rui and Huang, Jiwu},
+  journal={arXiv preprint arXiv:2211.03930},
+  year={2022}
 }
