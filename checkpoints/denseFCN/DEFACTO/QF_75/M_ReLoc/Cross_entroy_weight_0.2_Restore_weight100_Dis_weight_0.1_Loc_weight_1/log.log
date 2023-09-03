@@ -1,0 +1,36 @@
+[2023-09-03 13:06:29,428][train.py][line:351][INFO] train_images_split: ../Datasets/DEFACTO/train_images.pickle
+[2023-09-03 13:06:29,428][train.py][line:351][INFO] test_images_split: ../Datasets/DEFACTO/val_images.pickle
+[2023-09-03 13:06:29,428][train.py][line:351][INFO] train_image_path: ../Datasets/DEFACTO/tamper/
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] train_mask_path: ../Datasets/DEFACTO/mask/
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] test_image_path: ../Datasets/DEFACTO/tamper/
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] test_mask_path: ../Datasets/DEFACTO/mask/
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] localization_model: denseFCN
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] mode: train
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] bn_in: bn
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] quality: 75
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] epochs: 60
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] loc_learning_rate: 0.0001
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] patience: 2
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] restore_learning_rate: 0.0001
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] dis_learning_rate: 0.0001
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] lr_schdular: 
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] loc_batch_size: 56
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] loc_patch_size: 128
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] restore_batch_size: 56
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] restore_patch_size: 128
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] aug: True
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] display_step: 100
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] dataset_name: DEFACTO
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] compress_type: JPEG
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] IMG_SIZE: 512
+[2023-09-03 13:06:29,429][train.py][line:351][INFO] image_step: 512
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] loc_restore_path: ../pretrained/DEFACTO/denseFCN/QF75/Loc_model/loc_model.pth
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] restore_path: ../pretrained/DEFACTO/denseFCN/QF75/Restore_model/restore_model.pth
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] cross_entropy_weight: 0.2
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] restore_weight: 100
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] GAN_weight: 0.1
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] loc_weight: 1
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] dis_step_iters: 1
+[2023-09-03 13:06:29,430][train.py][line:351][INFO] save_model_path: ../checkpoints/denseFCN/DEFACTO/QF_75/M_ReLoc//Cross_entroy_weight_0.2_Restore_weight100_Dis_weight_0.1_Loc_weight_1/
+[2023-09-03 13:06:29,430][train.py][line:356][INFO] Train Loc data:1587 Train Restore data: 1587 Val data:9878
+[2023-09-03 13:09:40,467][train.py][line:436][INFO] epoch=0/60,99/1587of train 100, Learning rate=0.0001 Restore loss = 1.4704600535333157 Loc loss = 0.2896206163242459
