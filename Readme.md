@@ -36,12 +36,16 @@ The tampering localization methods and restoration method used in this paper can
 # Cication
 If you use our code please cite:
 
-@ARTICLE{10223250,
-  author={Zhuang, Peiyu and Li, Haodong and Yang, Rui and Huang, Jiwu},
-  journal={IEEE Transactions on Information Forensics and Security}, 
+@ARTICLE{ReLoc,
+
   title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization}, 
+
+  author={Zhuang, Peiyu and Li, Haodong and Yang, Rui and Huang, Jiwu},
+
+  journal={IEEE Transactions on Information Forensics and Security}, 
+
   year={2023},
+
   volume={18},
-  number={},
-  pages={5243-5257},
-  doi={10.1109/TIFS.2023.3306181}}
+
+  pages={5243-5257}}
