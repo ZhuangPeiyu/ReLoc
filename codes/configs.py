@@ -1,6 +1,5 @@
 import argparse
 
-
 def configs_DEFACTO(args):
     args.train_images_split = "../Datasets/DEFACTO/train_images.pickle"
     args.test_images_split = "../Datasets/DEFACTO/val_images.pickle"

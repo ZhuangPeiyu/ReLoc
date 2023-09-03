@@ -5,32 +5,43 @@ This is the implementation of the method proposed in "ReLoc: A Restoration-Assis
 # Network Architecture!
 ![image](https://github.com/ZhuangPeiyu/ReLoc/blob/main/models/ReLoc.png)
 # Files structure of ReLoc
-- main_train.py
-- metrics.py
-- models
-  - denseFCN.py
-  - SCUnet.py
-- checkpoint
+- codes 
+  - models: codes of SCSEUnet <sup>[1]</sup>
+  - MVSS_net: codes of MVSSNet <sup>[2]</sup>
+  - denseFCN.py: code of DFCN <sup>[3]</sup>
+  - SCUNet_main: codes of SCUNet <sup>[4]</sup>
+  - metrics.py: code for computing the localization performance.
+  - test.py: the testing script.
+  - train.py: the training script.
+  - configs.py: the config of training ReLoc.
+- checkpoints: the weights of ReLoc equipped with 3 localization modules (i.e., DFCN, SCSEUnet, and MVSSNet)
+trained on DEFACTO dataset. You can download these files from [Baidu Yun (Code: e5ww)](https://pan.baidu.com/s/1UlQRDXjK6TuhucdOiiyvdQ)
 
 
 # How to run
-## Train the model from scratch
-python main_train.py
+## Train the ReLoc model
+### 1. Modify the training config of ReLoc in configs.py
+### 2. python train.py
 
+## Test the ReLoc model
+### 1. python test.py
 
 # Acknowledgments
 The tampering localization methods and restoration method used in this paper can find in the following links:
-- SCSE-Unet: https://github.com/HighwayWu/ImageForensicsOSN
-- MVSS-net: https://github.com/dong03/MVSS-Net
-- DenseFCN: https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization
-- SC-Unet: https://github.com/cszn/SCUNet/
+- SCSE-Unet <sup>[1]</sup>: [paper](https://ieeexplore.ieee.org/abstract/document/9686650) and [codes](https://github.com/HighwayWu/ImageForensicsOSN)
+- MVSSNet <sup>[2]</sup>: [paper](https://ieeexplore.ieee.org/abstract/document/9789576) and [codes](https://github.com/dong03/MVSS-Net)
+- DFCN <sup>[3]</sup>: [paper](https://ieeexplore.ieee.org/abstract/document/9393396) and [codes](https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization)
+- SCUnet <sup>[4]</sup>: [paper](https://arxiv.org/abs/2203.13278) and [codes](https://github.com/cszn/SCUNet/)
 
 # Cication
 If you use our code please cite:
 
-@article{  zhuang2022reloc,  
-  title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization},  
-  author={Zhuang, Peiyu and Li, Haodong and Yang, Rui and Huang, Jiwu},  
-  journal={arXiv preprint arXiv:2211.03930},  
-  year={2022}  
-}
+@ARTICLE{10223250,
+  author={Zhuang, Peiyu and Li, Haodong and Yang, Rui and Huang, Jiwu},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={ReLoc: A Restoration-Assisted Framework for Robust Image Tampering Localization}, 
+  year={2023},
+  volume={18},
+  number={},
+  pages={5243-5257},
+  doi={10.1109/TIFS.2023.3306181}}
