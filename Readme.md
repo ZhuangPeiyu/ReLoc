@@ -20,8 +20,9 @@ trained on DEFACTO dataset. You can download these files from [Baidu Yun (Code: 
 
 # How to run
 ## Train the ReLoc model
-### 1. Modify the training config of ReLoc in configs.py
-### 2. python train.py
+### 1. cd ./codes
+### 2. Modify the training config of ReLoc in configs.py
+### 3. python train.py
 
 ## Test the ReLoc model
 ### 1. python test.py
