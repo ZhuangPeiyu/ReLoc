@@ -98,7 +98,7 @@ encoder_params = {
             'filters': [128, 256, 512, 1024, 2048],
             'decoder_filters': [64, 128, 256, 384],
             'init_op': senet154,
-            'url': '/data2/zhuangpy/tamperingLocalization/ReLoc/codes/pytorch_codes/models//senet154-c7b49a05.pth',
+            'url': './models/senet154-c7b49a05.pth',
             # 'url':None
         },
     'seresnext101':
@@ -257,7 +257,6 @@ class EncoderDecoder(AbstractModel):
         ]
         return _get_layers_params(layers)
 
-'''自己加的'''
 class EncoderDecoder_withEdgeDecoder(AbstractModel):
     def __init__(self, num_classes, num_channels=3, encoder_name='resnet34'):
         if not hasattr(self, 'first_layer_stride_two'):
@@ -400,7 +399,7 @@ class ConvBottleneck(nn.Module):
     def forward(self, dec, enc):
         x = torch.cat([dec, enc], dim=1)
         return self.seq(x)
-#自己加的#
+
 class ConvBottleneck_withBN(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -421,7 +420,7 @@ class UnetDecoderBlock(nn.Module):
 
     def forward(self, x):
         return self.layer(x)
-'''自己加的'''
+
 class UnetDecoderBlock_BN(nn.Module):
     def __init__(self, in_channels, middle_channels, out_channels):
         super().__init__()
@@ -541,7 +540,6 @@ class DensenetUnet(EncoderDecoder):
             )
 
 
-# class SEUnet(EncoderDecoder_withEdgeDecoder):
 class SEUnet(EncoderDecoder):
     def __init__(self, seg_classes=1, backbone_arch='senet154',return_middle_map = False):
         self.first_layer_stride_two = True
@@ -563,27 +561,6 @@ class SEUnet(EncoderDecoder):
     @property
     def first_layer_params_name(self):
         return 'layer0.conv1'
-#
-# class SEUnet_BN(EncoderDecoder_BN):
-#     def __init__(self, seg_classes=1, backbone_arch='senet154'):
-#         self.first_layer_stride_two = True
-#         super().__init__(seg_classes, num_channels=3, encoder_name=backbone_arch)
-#
-#     def get_encoder(self, encoder, layer):
-#         if layer == 0:
-#             return encoder.layer0
-#         elif layer == 1:
-#             return nn.Sequential(encoder.pool, encoder.layer1)
-#         elif layer == 2:
-#             return encoder.layer2
-#         elif layer == 3:
-#             return encoder.layer3
-#         elif layer == 4:
-#             return encoder.layer4
-#
-#     @property
-#     def first_layer_params_name(self):
-#         return 'layer0.conv1'
 
 class ConvSCSEBottleneckNoBn(nn.Module):
     def __init__(self, in_channels, out_channels, reduction=2):
@@ -625,11 +602,6 @@ class SCSEUnet(SEUnet):
         self.bottleneck_type = ConvSCSEBottleneckNoBn
         self.return_middle_map = return_middle_map
         super().__init__(seg_classes, backbone_arch=backbone_arch,return_middle_map = self.return_middle_map)
-'''自己加的'''
-# class SCSEUnet_BN(SEUnet_BN):
-#     def __init__(self, seg_classes=1, backbone_arch='seresnext50'):
-#         self.bottleneck_type = ConvSCSEBottleneckBN
-#         super().__init__(seg_classes, backbone_arch=backbone_arch)
 
 setattr(sys.modules[__name__], 'resnet_unet', partial(Resnet))
 setattr(sys.modules[__name__], 'convt_resnet_unet', partial(ConvTransposeResnetUnet))
@@ -638,23 +610,5 @@ setattr(sys.modules[__name__], 'dpn_unet', partial(DPNUnet))
 setattr(sys.modules[__name__], 'densenet_unet', partial(DensenetUnet))
 setattr(sys.modules[__name__], 'se_unet', partial(SEUnet))
 setattr(sys.modules[__name__], 'scse_unet', partial(SCSEUnet))
-# setattr(sys.modules[__name__], 'scse_unet_bn', partial(SCSEUnet_BN))
 
 
-if __name__ == '__main__':
-    os.environ['CUDA_VISIBLE_DEVICES'] = '0'
-    # model = SCSEUnet(backbone_arch='senet154').cuda()
-    # for index,(name,paramerter) in enumerate(model.named_parameters()):
-    #     print(index,name)
-    # net = SEUnet()
-    # print(net)
-    # d = DensenetUnet(1, backbone_arch='densenet121')
-    # d.eval()
-    # import numpy as np
-    #
-    # with torch.no_grad():
-    #     images = torch.from_numpy(np.zeros((16, 3, 256, 256), dtype='float32'))
-    #     i = d(images)
-    #     print(i.shape)
-    #
-    # print(d)
