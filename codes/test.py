@@ -94,6 +94,7 @@ class Tampering_Dataset(Dataset):
 
         fname1, fname2 = self.filelist[idx]
         img = cv2.imread(fname1)
+        H, W = img.shape[0], img.shape[1]
         # mask_zeros = np.zeros([H, W, 3])
         if fname2 == '':
             mask = np.zeros([H, W, 3])
