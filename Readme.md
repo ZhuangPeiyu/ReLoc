@@ -34,7 +34,7 @@ The tampering localization methods and restoration method used in this paper can
 - DFCN <sup>[3]</sup>: [paper](https://ieeexplore.ieee.org/abstract/document/9393396) and [codes](https://github.com/ZhuangPeiyu/Dense-FCN-for-tampering-localization)
 - SCUnet <sup>[4]</sup>: [paper](https://arxiv.org/abs/2203.13278) and [codes](https://github.com/cszn/SCUNet/)
 
-# Cication
+# Citation
 If you use our code please cite:
 
 @ARTICLE{ReLoc,
